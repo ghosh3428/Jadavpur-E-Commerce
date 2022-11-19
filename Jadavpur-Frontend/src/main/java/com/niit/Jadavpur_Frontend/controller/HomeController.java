@@ -12,15 +12,35 @@ public class HomeController
 	public ModelAndView index()
 	{
 		ModelAndView mv = new ModelAndView("index");
-		mv.addObject("message" , "WELCOME TO NIIIT JADAVPUR");
+		mv.addObject("title" , "Online Shopping - Home");
+		mv.addObject("userclickhome" , true);
 		return mv;
 	}
 	
 	@RequestMapping(value="/about")
 	public ModelAndView about()
 	{
-		ModelAndView mv = new ModelAndView("about");
-		mv.addObject("message" , "About Us Page");
+		ModelAndView mv = new ModelAndView("index");
+		mv.addObject("title" , "Online Shopping - About Us");
+		mv.addObject("userclickaboutus" , true);
+		return mv;
+	}
+	
+	@RequestMapping(value="/contact")
+	public ModelAndView contact()
+	{
+		ModelAndView mv = new ModelAndView("index");
+		mv.addObject("title" , "Online Shopping - Contact Us");
+		mv.addObject("userclickcontactus" , true);
+		return mv;
+	}
+	
+	@RequestMapping(value="/product")
+	public ModelAndView product()
+	{
+		ModelAndView mv = new ModelAndView("index");
+		mv.addObject("title" , "Online Shopping - View Product");
+		mv.addObject("userclickproduct" , true);
 		return mv;
 	}
 }
