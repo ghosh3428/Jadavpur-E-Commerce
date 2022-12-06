@@ -25,16 +25,39 @@ public class CategoryTest
 		categoryDAO = (CategoryDAO)context.getBean("categoryDAO");
 	}
 	
-	@Test
+	//@Test
 	public void testInsert()
 	{
 		category = new Category();
-		category.setId(1);
-		category.setCategoryName("TV");
-		category.setDescription("Sample category for TV");
+		category.setId(3);
+		category.setCategoryName("Fridge");
+		category.setDescription("Sample category for fridge");
 		category.setActive(true);
 		
 		assertEquals("Error adding Category" , true, categoryDAO.insert(category));
+	}
+	
+	@Test
+	public void testDelete()
+	{
+		category = categoryDAO.getCategory(12);
+		
+		assertEquals("Error deleting Category" , true, categoryDAO.delete(category));
+	}
+	
+	//@Test
+	public void testUpdate()
+	{
+		category = categoryDAO.getCategory(1);
+		category.setCategoryName("Television");
+		
+		assertEquals("Error updating Category" , true, categoryDAO.update(category));
+	}
+	
+	@Test
+	public void testCategoryList()
+	{
+		assertEquals("Error updating Category" , 2, categoryDAO.categoryList().size());
 	}
 
 }

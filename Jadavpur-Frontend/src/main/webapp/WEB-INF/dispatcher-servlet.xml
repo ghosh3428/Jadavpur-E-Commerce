@@ -11,8 +11,8 @@ xmlns:mvc="http://www.springframework.org/schema/mvc"
         https://www.springframework.org/schema/mvc/spring-mvc.xsd
 ">
 
-	<context:component-scan base-package="com.niit.Jadavpur_Frontend.controller" />
-
+	<context:component-scan base-package="com.niit.Jadavpur_Frontend" />
+	<context:component-scan base-package="com.niit.Jadavpur_Backend" />
 	<mvc:annotation-driven />
 	
 	<mvc:resources location="/assets/" mapping="/rs/**/" />

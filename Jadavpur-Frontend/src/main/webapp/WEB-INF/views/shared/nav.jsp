@@ -19,7 +19,7 @@
 				<li class="nav-item active"><a class="nav-link" href="${contextRoot}/contact">Contact
 
 				</a></li>
-				<li class="nav-item active"><a class="nav-link" href="${contextRoot}/product">Product
+				<li class="nav-item active"><a class="nav-link" href="${contextRoot}/product/view/all/product">Product
 
 				</a></li>
 			</ul>

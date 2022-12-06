@@ -29,7 +29,8 @@
 
 <!-- Bootstrap core CSS -->
 <link href="${css}/bootstrap.min.css" rel="stylesheet">
-
+<!-- Datatable CSS -->
+<link href="${css}/jquery.dataTables.css" rel="stylesheet">
 <!-- Custom styles for this template -->
 <link href="${css}/myStyle.css" rel="stylesheet">
 
@@ -37,23 +38,24 @@
 
 <body>
 	<%@ include file="./shared/nav.jsp"%>
-	
+
 	<div class="wrapper">
 		<div class="content">
 			<!-- Home Content -->
 			<div class="container">
-			<c:if test="${userclickhome == true}">
-				<%@ include file="home.jsp"%>
-			</c:if>
-			<c:if test="${userclickaboutus == true}">
-				<%@ include file="about.jsp"%>
-			</c:if>
-			<c:if test="${userclickcontactus == true}">
-				<%@ include file="contact.jsp"%>
-			</c:if>
-			<c:if test="${userclickproduct == true}">
-				<%@ include file="product.jsp"%>
-			</c:if>
+				<c:if test="${userclickhome == true}">
+					<%@ include file="home.jsp"%>
+				</c:if>
+				<c:if test="${userclickaboutus == true}">
+					<%@ include file="about.jsp"%>
+				</c:if>
+				<c:if test="${userclickcontactus == true}">
+					<%@ include file="contact.jsp"%>
+				</c:if>
+				<c:if
+					test="${userclickallproducts == true || userclickcategoryproducts==true}">
+					<%@ include file="product.jsp"%>
+				</c:if>
 			</div>
 		</div>
 
@@ -65,10 +67,15 @@
 
 	<!-- Bootstrap core JavaScript -->
 	<script src="${js}/bootstrap.min.js"></script>
-
-
+	<!-- Datatable JavaScript -->
+	<script src="${js}/dataTables.bootstrap.js"></script>
+	<script src="${js}/jquery.dataTables.js"></script>
 	<!-- Custom JavaScript -->
 	<script src="${js}/myscript.js"></script>
+
+	<script>
+		$("table").DataTable();
+	</script>
 </body>
 
 </html>

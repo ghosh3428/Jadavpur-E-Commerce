@@ -1,12 +1,17 @@
 package com.niit.Jadavpur_Frontend.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.niit.Jadavpur_Backend.DAO.CategoryDAO;
+
 @Controller
 public class HomeController 
 {
+	@Autowired
+	CategoryDAO categoryDAO;
 
 	@RequestMapping(value={"/","/home","/index"})
 	public ModelAndView index()
@@ -14,6 +19,7 @@ public class HomeController
 		ModelAndView mv = new ModelAndView("index");
 		mv.addObject("title" , "Online Shopping - Home");
 		mv.addObject("userclickhome" , true);
+		mv.addObject("categoryList" , categoryDAO.categoryList());
 		return mv;
 	}
 	
@@ -32,15 +38,6 @@ public class HomeController
 		ModelAndView mv = new ModelAndView("index");
 		mv.addObject("title" , "Online Shopping - Contact Us");
 		mv.addObject("userclickcontactus" , true);
-		return mv;
-	}
-	
-	@RequestMapping(value="/product")
-	public ModelAndView product()
-	{
-		ModelAndView mv = new ModelAndView("index");
-		mv.addObject("title" , "Online Shopping - View Product");
-		mv.addObject("userclickproduct" , true);
 		return mv;
 	}
 }
