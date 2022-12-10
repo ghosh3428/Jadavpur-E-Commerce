@@ -2,6 +2,7 @@ package com.niit.Jadavpur_Frontend.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -24,13 +25,14 @@ public class ProductController
 		return mv;
 	}
 
-	@RequestMapping(value="/view/category/product")
-	public ModelAndView viewCategoryProduct()
+	@RequestMapping(value="/view/category/{id}/product")
+	public ModelAndView viewCategoryProduct(@PathVariable("id") int c_id)
 	{
 		ModelAndView mv = new ModelAndView("index");
 		mv.addObject("title" , "Online Shopping - Category Products");
 		mv.addObject("userclickcategoryproducts" , true);
 		mv.addObject("categoryList" , categoryDAO.categoryList());
+		mv.addObject("category" , categoryDAO.getCategory(c_id));
 		return mv;
 	}
 }

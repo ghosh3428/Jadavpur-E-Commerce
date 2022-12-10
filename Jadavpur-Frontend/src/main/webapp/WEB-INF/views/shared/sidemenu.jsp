@@ -3,7 +3,7 @@
 	<div class="list-group">
 
 		<c:forEach items="${categoryList}" var="category">
-		<a href="#" >${category.categoryName}</a>
+		<a href="${contextRoot}/product/view/category/${category.id}/product" >${category.categoryName}</a>
 		</c:forEach>
 
 	</div>

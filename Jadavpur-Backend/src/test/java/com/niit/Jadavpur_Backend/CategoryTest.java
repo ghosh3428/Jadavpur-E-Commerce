@@ -25,7 +25,7 @@ public class CategoryTest
 		categoryDAO = (CategoryDAO)context.getBean("categoryDAO");
 	}
 	
-	//@Test
+	@Test
 	public void testInsert()
 	{
 		category = new Category();
@@ -45,7 +45,7 @@ public class CategoryTest
 		assertEquals("Error deleting Category" , true, categoryDAO.delete(category));
 	}
 	
-	//@Test
+	@Test
 	public void testUpdate()
 	{
 		category = categoryDAO.getCategory(1);
