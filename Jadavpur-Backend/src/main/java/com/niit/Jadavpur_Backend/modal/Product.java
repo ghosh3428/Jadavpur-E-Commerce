@@ -7,10 +7,13 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name="Niit_Jadavpur_Product")
 public class Product 
 {
+	
 	@Id
 	private int id;
 	
@@ -27,12 +30,14 @@ public class Product
 
 	private int quantity;
 	
+	@JsonIgnore
 	@Column(name = "is_active")
 	private boolean active;
-
+	
 	@Column(name = "category_id")
 	private int categoryId;
-
+	
+	@JsonIgnore
 	@Column(name = "supplier_id")
 	private int supplierId;
 	

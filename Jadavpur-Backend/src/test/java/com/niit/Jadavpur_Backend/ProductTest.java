@@ -26,20 +26,43 @@ public class ProductTest
 		productDAO = (ProductDAO)context.getBean("productDAO");
 	}
 	
-	@Test
+	//@Test
 	public void testInsert()
 	{
 		product = new Product();
-		product.setId(1);
-		product.setName("boAt Storm Smartwatch ");
-		product.setBrand("boAt ");
-		product.setDescription("Get ready to keep a track of your fitness and health stats in style with the boAt Storm Smartwatch. Featuring an elegant design, this smartwatch is sure to be your fitness companion at all times.");
-		product.setUnitPrice(1999);
+		product.setId(3);
+		product.setName("15s-fr2512TU");
+		product.setBrand("HP");
+		product.setDescription("512 GB PCIe® NVMe™ M.2 SSD\r\n" + 
+				"8 GB DDR4-3200 MHz RAM (1 x 8 GB)");
+		product.setUnitPrice(46999.00);
 		product.setActive(true);
-		product.setCategoryId(2);
+		product.setCategoryId(5);
 		product.setSupplierId(2);
-		product.setQuantity(5);
+		product.setQuantity(3);
 		
 		assertEquals("Error" , true , productDAO.insert(product));
 	}
+	
+	//@Test
+	public void testGetProduct()
+	{
+		product = productDAO.getProduct(1);
+		
+		assertEquals("Error" , "PRDf311b4016544", product.getCode());
+	}
+	
+	//@Test
+	public void testActiveProduct()
+	{
+		assertEquals("Error" ,3, productDAO.listActiveProducts().size());
+	}
+	
+	@Test
+	public void testActiveCategoryProduct()
+	{
+		assertEquals("Error" ,2, productDAO.listActiveProductsByCategory(5).size());
+	}
+	
+	
 }
