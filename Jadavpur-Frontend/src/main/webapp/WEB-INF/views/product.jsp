@@ -7,12 +7,18 @@
 
 		<div class="row">
 			<c:if test="${userclickallproducts == true}" var="data">
+				<script>
+					window.categoryId = '';
+				</script>
 				<ol class="breadcrumb">
 					<li class="breadcrumb-item"><a href="${contextRoot}/home">Home</a></li>
 					<li class="breadcrumb-item active">All Products</li>
 				</ol>
 			</c:if>
 			<c:if test="${userclickcategoryproducts == true}" var="data">
+				<script>
+					window.categoryId = '${category.id}';
+				</script>
 				<ol class="breadcrumb">
 					<li class="breadcrumb-item"><a href="${contextRoot}/home">Home</a></li>
 					<li class="breadcrumb-item"><a
@@ -21,29 +27,30 @@
 				</ol>
 			</c:if>
 		</div>
-		<div class="row">
-			<table>
-				<tr>
-					<td>ID</td>
-					<td>Name</td>
-				</tr>
+		<div class="col-sm-12">
+			<table id="productTable"
+				class="table table-condensed table-striped table-hover">
 
-				<tr>
-					<td>1</td>
-					<td>Amit</td>
-				</tr>
-				<tr>
-					<td>2</td>
-					<td>Sumit</td>
-				</tr>
-				<tr>
-					<td>3</td>
-					<td>Sanjay</td>
-				</tr>
-				<tr>
-					<td>4</td>
-					<td>Vijay</td>
-				</tr>
+				<thead>
+					<tr>
+						<th></th>
+						<th>NAME</th>
+						<th>BRAND</th>
+						<th>UNIT PRICE</th>
+						<th>AVAILABLE QUANTITY</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tfoot>
+					<tr>
+						<th></th>
+						<th>NAME</th>
+						<th>BRAND</th>
+						<th>UNIT PRICE</th>
+						<th>AVAILABLE QUANTITY</th>
+						<th></th>
+					</tr>
+				</tfoot>
 			</table>
 		</div>
 	</div>

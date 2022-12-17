@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.niit.Jadavpur_Backend.DAO.CategoryDAO;
+import com.niit.Jadavpur_Backend.DAO.ProductDAO;
 
 @Controller
 @RequestMapping(value="/product")
@@ -14,6 +15,9 @@ public class ProductController
 {
 	@Autowired
 	CategoryDAO categoryDAO;
+	
+	@Autowired
+	ProductDAO productDAO;
 	
 	@RequestMapping(value="/view/all/product")
 	public ModelAndView viewAllProduct()
@@ -33,6 +37,17 @@ public class ProductController
 		mv.addObject("userclickcategoryproducts" , true);
 		mv.addObject("categoryList" , categoryDAO.categoryList());
 		mv.addObject("category" , categoryDAO.getCategory(c_id));
+		return mv;
+	}
+	
+	@RequestMapping(value="/view/single/{id}/product")
+	public ModelAndView viewSingleProduct(@PathVariable("id") int p_id)
+	{
+		ModelAndView mv = new ModelAndView("index");
+		mv.addObject("title" , "Online Shopping - Category Products");
+		mv.addObject("userclicksingleproduct" , true);
+		mv.addObject("categoryList" , categoryDAO.categoryList());
+		mv.addObject("product" ,productDAO.getProduct(p_id) );
 		return mv;
 	}
 }

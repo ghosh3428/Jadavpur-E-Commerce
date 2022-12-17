@@ -25,7 +25,9 @@
 
 <title>${title}</title>
 
-
+<script>
+	window.contextRoot = '${contextRoot}';
+</script>
 
 <!-- Bootstrap core CSS -->
 <link href="${css}/bootstrap.min.css" rel="stylesheet">
@@ -52,6 +54,9 @@
 				<c:if test="${userclickcontactus == true}">
 					<%@ include file="contact.jsp"%>
 				</c:if>
+				<c:if test="${userclicksingleproduct == true}">
+					<%@ include file="viewproduct.jsp"%>
+				</c:if>
 				<c:if
 					test="${userclickallproducts == true || userclickcategoryproducts==true}">
 					<%@ include file="product.jsp"%>
@@ -73,9 +78,6 @@
 	<!-- Custom JavaScript -->
 	<script src="${js}/myscript.js"></script>
 
-	<script>
-		$("table").DataTable();
-	</script>
 </body>
 
 </html>
