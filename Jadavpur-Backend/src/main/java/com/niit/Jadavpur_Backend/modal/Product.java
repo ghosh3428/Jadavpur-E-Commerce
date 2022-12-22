@@ -4,6 +4,8 @@ import java.util.UUID;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -15,6 +17,7 @@ public class Product
 {
 	
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	
 	private String code;
@@ -41,10 +44,16 @@ public class Product
 	@Column(name = "supplier_id")
 	private int supplierId;
 	
+	
+	
 
 	public Product() 
 	{	
 		code = "PRD" + UUID.randomUUID().toString().substring(24);
+		name="new product";
+		brand ="not defined";
+		unitPrice = 0.0;
+		quantity = 0;
 	}
 
 	public int getId() 

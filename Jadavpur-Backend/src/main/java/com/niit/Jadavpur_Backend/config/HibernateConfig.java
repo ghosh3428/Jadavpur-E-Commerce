@@ -21,7 +21,7 @@ public class HibernateConfig {
 	private String DATABASE_DRIVER = "org.h2.Driver";
 	private String DATABASE_DIALECT = "org.hibernate.dialect.H2Dialect";
 	private String DATABASE_USERNAME = "student";
-	private String DATABASE_PASSWORD = "password";
+	private String DATABASE_PASSWORD = "";
 
 	@Bean
 	public DataSource getDataSource() {

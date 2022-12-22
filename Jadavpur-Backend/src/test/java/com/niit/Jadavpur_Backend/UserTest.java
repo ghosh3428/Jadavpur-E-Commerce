@@ -40,12 +40,12 @@ public class UserTest
 		user.setRole("USER");
 		*/
 		
-		user.setContactNumber("9807898734");
-		user.setEmail("kapil@gmail.com");
+		user.setContactNumber("8990098734");
+		user.setEmail("sm@gmail.com");
 		user.setEnabled(true);
-		user.setFirstName("Kapil");
-		user.setId(2);
-		user.setLastName("Sharma");
+		user.setFirstName("Suraj");
+		//user.setId(3);
+		user.setLastName("Mandol");
 		user.setPassword("supplier12345");
 		user.setRole("SUPPLIER");
 		
@@ -53,10 +53,19 @@ public class UserTest
 		assertEquals("Error inserting user" ,  true , userDAO.insert(user));
 	}
 	
-	@Test
+	//@Test
 	public void testGetUser()
 	{
 		user = userDAO.getUser("rohan@gmail.com");
 		assertEquals("Error fetching user" , "Rohan" , user.getFirstName());
 	}
+	
+	//@Test
+	public void testSupplierList()
+	{
+			
+			assertEquals("Error fetching user" , 2 , userDAO.getSupplierList().size());
+	}
+	
+	
 }	

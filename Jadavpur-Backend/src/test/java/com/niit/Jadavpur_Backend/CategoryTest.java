@@ -29,9 +29,9 @@ public class CategoryTest
 	public void testInsert()
 	{
 		category = new Category();
-		category.setId(5);
-		category.setCategoryName("Laptop");
-		category.setDescription("Sample category for Laptop");
+		//category.setId(2);
+		category.setCategoryName("SmartWatch");
+		category.setDescription("Sample category for SmartWatch");
 		category.setActive(true);
 		
 		assertEquals("Error adding Category" , true, categoryDAO.insert(category));

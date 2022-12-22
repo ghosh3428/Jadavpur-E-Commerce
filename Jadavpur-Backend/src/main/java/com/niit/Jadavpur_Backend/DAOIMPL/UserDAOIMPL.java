@@ -1,5 +1,7 @@
 package com.niit.Jadavpur_Backend.DAOIMPL;
 
+import java.util.List;
+
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,13 +38,36 @@ public class UserDAOIMPL implements UserDAO
 	
 		try
 		{
-			String selectActiveCategory = "FROM User WHERE email = :email";
+			String selectuser = "FROM User WHERE email = :email";
 			
-			Query query = sessionFactory.getCurrentSession().createQuery(selectActiveCategory);
+			Query query = sessionFactory.getCurrentSession().createQuery(selectuser);
 					
 			query.setParameter("email", email);
 							
 			return (User) query.getSingleResult();
+			
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+			return null;
+		}
+	}
+
+
+	@Override
+	public List<User> getSupplierList() 
+	{
+		try
+		{
+			String selectuser = "FROM User WHERE role = :role and enabled = :enabled";
+			
+			Query query = sessionFactory.getCurrentSession().createQuery(selectuser);
+					
+			query.setParameter("role", "SUPPLIER");
+			query.setParameter("enabled", true);
+							
+			return query.getResultList();
 			
 		}
 		catch(Exception e)
