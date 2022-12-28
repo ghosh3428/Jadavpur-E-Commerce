@@ -57,12 +57,12 @@
 				<c:if test="${userclicksingleproduct == true}">
 					<%@ include file="viewproduct.jsp"%>
 				</c:if>
-				<c:if test="${userclickmanageproduct == true}">
-					<%@ include file="manageproduct.jsp"%>
-				</c:if>
 				<c:if
 					test="${userclickallproducts == true || userclickcategoryproducts==true}">
 					<%@ include file="product.jsp"%>
+				</c:if>
+				<c:if test="${userclickmanageproduct == true}">
+					<%@ include file="manageproduct.jsp"%>
 				</c:if>
 			</div>
 		</div>

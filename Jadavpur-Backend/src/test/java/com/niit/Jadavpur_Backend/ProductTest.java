@@ -26,7 +26,7 @@ public class ProductTest
 		productDAO = (ProductDAO)context.getBean("productDAO");
 	}
 	
-	@Test
+	//@Test
 	public void testInsert()
 	{
 		product = new Product();
@@ -58,7 +58,7 @@ public class ProductTest
 		assertEquals("Error" ,3, productDAO.listActiveProducts().size());
 	}
 	
-	//@Test
+	@Test
 	public void testActiveCategoryProduct()
 	{
 		assertEquals("Error" ,2, productDAO.listActiveProductsByCategory(5).size());

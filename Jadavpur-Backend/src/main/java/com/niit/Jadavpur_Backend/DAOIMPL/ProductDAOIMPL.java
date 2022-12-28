@@ -22,6 +22,7 @@ public class ProductDAOIMPL implements ProductDAO
 	public boolean insert(Product product) 
 	{
 		try {
+			product.setActive(true);
 			sessionFactory.getCurrentSession().persist(product);
 			return true;
 		} catch (Exception e) {

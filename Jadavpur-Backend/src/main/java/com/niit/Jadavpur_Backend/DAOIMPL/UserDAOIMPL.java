@@ -38,9 +38,9 @@ public class UserDAOIMPL implements UserDAO
 	
 		try
 		{
-			String selectuser = "FROM User WHERE email = :email";
+			String selectActiveCategory = "FROM User WHERE email = :email";
 			
-			Query query = sessionFactory.getCurrentSession().createQuery(selectuser);
+			Query query = sessionFactory.getCurrentSession().createQuery(selectActiveCategory);
 					
 			query.setParameter("email", email);
 							
@@ -53,8 +53,7 @@ public class UserDAOIMPL implements UserDAO
 			return null;
 		}
 	}
-
-
+	
 	@Override
 	public List<User> getSupplierList() 
 	{
@@ -76,5 +75,6 @@ public class UserDAOIMPL implements UserDAO
 			return null;
 		}
 	}
+
 
 }

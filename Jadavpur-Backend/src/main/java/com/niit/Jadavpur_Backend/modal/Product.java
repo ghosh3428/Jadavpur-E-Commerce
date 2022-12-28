@@ -8,6 +8,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.NotBlank;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -22,15 +27,20 @@ public class Product
 	
 	private String code;
 	
+	@NotBlank(message="Product Name cannot be empty")
 	private String name;
-
+	
+	@NotBlank(message="Brand Name cannot be empty")
 	private String brand;
 	
+	@Size(min=5 , max=250 , message="Length of the Discription must be between 5 and 250")
 	private String description;
 	
+	@Min(value=0 , message="Unit Price cannot be less than 0")
 	@Column(name = "unit_price")
 	private double unitPrice;
-
+	
+	@Min(value=0 , message="Quantity cannot be less than 0")
 	private int quantity;
 	
 	@JsonIgnore
@@ -44,16 +54,10 @@ public class Product
 	@Column(name = "supplier_id")
 	private int supplierId;
 	
-	
-	
 
 	public Product() 
 	{	
 		code = "PRD" + UUID.randomUUID().toString().substring(24);
-		name="new product";
-		brand ="not defined";
-		unitPrice = 0.0;
-		quantity = 0;
 	}
 
 	public int getId() 

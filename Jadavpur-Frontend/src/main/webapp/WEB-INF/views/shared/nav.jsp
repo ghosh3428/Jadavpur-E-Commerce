@@ -10,21 +10,18 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 			<ul class="nav navbar-nav ">
-				<li class="nav-item active"><a class="nav-link" href="${contextRoot}/home">Home
-
-				</a></li>
-				<li class="nav-item active"><a class="nav-link" href="${contextRoot}/about">About
-
-				</a></li>
-				<li class="nav-item active"><a class="nav-link" href="${contextRoot}/contact">Contact
-
-				</a></li>
-				<li class="nav-item active"><a class="nav-link" href="${contextRoot}/product/view/all/product">Product
-
-				</a></li>
-				<li class="nav-item active"><a class="nav-link" href="${contextRoot}/manage/product">Manage Product
-
-				</a></li>
+				<li class="nav-item active"><a class="nav-link"
+					href="${contextRoot}/home">Home </a></li>
+				<li class="nav-item active"><a class="nav-link"
+					href="${contextRoot}/about">About </a></li>
+				<li class="nav-item active"><a class="nav-link"
+					href="${contextRoot}/contact">Contact </a></li>
+				<li class="nav-item active"><a class="nav-link"
+					href="${contextRoot}/product/view/all/product">Product </a></li>
+				</a>
+				</li>
+				<li class="nav-item active"><a class="nav-link"
+					href="${contextRoot}/manage/product">Manage Product </a></li>
 			</ul>
 		</div>
 	</div>
