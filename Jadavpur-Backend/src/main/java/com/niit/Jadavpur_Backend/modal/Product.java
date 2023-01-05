@@ -8,11 +8,13 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.NotBlank;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -54,7 +56,19 @@ public class Product
 	@Column(name = "supplier_id")
 	private int supplierId;
 	
+	
+	@Transient
+	private MultipartFile file;
 
+	public MultipartFile getFile() 
+	{
+		return file;
+	}
+
+	public void setFile(MultipartFile file) {
+		this.file = file;
+	}
+	
 	public Product() 
 	{	
 		code = "PRD" + UUID.randomUUID().toString().substring(24);

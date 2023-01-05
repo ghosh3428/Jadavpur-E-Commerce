@@ -3,10 +3,10 @@
 <div class="container">
 	<div class="row">
 
-		<c:if test="${not empty success}">
+		<c:if test="${not empty message}">
 			<div class="col-xs-12 offset-md-1 col-md-10">
 				<div class="alert alert-success alert-dismissible" role="alert">
-					${success}
+					${message}
 					<button type="button" class="close" data-dismiss="alert"
 						aria-label="Close">
 						<span aria-hidden="true">&times;</span>
@@ -38,7 +38,8 @@
 
 
 					<sf:form method="post" modelAttribute="newProduct"
-						action="${contextRoot}/manage/add/product">
+						action="${contextRoot}/manage/add/product"
+						enctype="multipart/form-data">
 
 						<div class="form-group row">
 							<label class="col-md-4 col-form-label" for="name"> Enter
@@ -88,6 +89,14 @@
 								<sf:errors path="description" cssClass="help-block" element="em" />
 							</div>
 						</div>
+
+						<div class="form-group row">
+							<label class="col-form-label col-md-4">Upload a file</label>
+							<div class="col-md-8">
+								<sf:input type="file" path="file" class="form-control" />
+								<sf:errors path="file" cssClass="help-block" element="em" />
+							</div>
+						</div>
 						<div class="form-group row">
 							<label class="col-form-label col-md-4"> Select Supplier </label>
 							<div class="col-md-8">
@@ -105,7 +114,12 @@
 									items="${categorylist}" itemLabel="categoryName" itemValue="id"
 									class="form-control">
 								</sf:select>
-
+								<br />
+								<div class="text-end">
+									<button type="button" data-toggle="modal"
+										data-target="#myCategoryModal" class="btn btn-warning btn-sm">ADD
+										CATEGORY</button>
+								</div>
 							</div>
 						</div>
 
@@ -129,8 +143,57 @@
 
 
 
+	<div class="modal fade" id="myCategoryModal" tabindex="-1"
+		role="dialog">
+
+		<div class="modal-dialog" role="document">
+
+			<div class="modal-content">
+
+				<div class="modal-header">
+
+					<h4 class="modal-title" id="myModalLabel">Add New Category</h4>
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+
+				<div class="modal-body">
+
+					<sf:form id="categoryForm" class="form-horizontal"
+						modelAttribute="category" 
+						action="${contextRoot}/manage/add/category"
+						method="POST">
+
+						<div class="form-group row">
+							<label class="control-label col-md-4">Name</label>
+							<div class="col-md-8 validate">
+								<sf:input type="text" path="categoryName" class="form-control"
+									placeholder="Category Name" />
+							</div>
+						</div>
+
+						<div class="form-group row">
+							<label class="control-label col-md-4">Description</label>
+							<div class="col-md-8 validate">
+								<sf:textarea path="description" class="form-control"
+									placeholder="Enter category description here!" />
+							</div>
+						</div>
 
 
+						<div class="form-group row">
+							<div class="col-md-offset-4 col-md-4">
+								<input type="submit" name="submit" value="Save"
+									class="btn btn-primary" />
+							</div>
+						</div>
+					</sf:form>
+				</div>
+			</div>
+		</div>
+	</div>
 
 </div>
 

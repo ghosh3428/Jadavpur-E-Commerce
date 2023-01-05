@@ -23,4 +23,6 @@ xmlns:mvc="http://www.springframework.org/schema/mvc"
 		<property name="suffix" value=".jsp" />
 	</bean>
 
+<bean id="multipartResolver"
+				  class="org.springframework.web.multipart.support.StandardServletMultipartResolver"/>
 </beans>
