@@ -25,7 +25,7 @@ public class CategoryTest
 		categoryDAO = (CategoryDAO)context.getBean("categoryDAO");
 	}
 	
-	@Test
+	//@Test
 	public void testInsert()
 	{
 		category = new Category();

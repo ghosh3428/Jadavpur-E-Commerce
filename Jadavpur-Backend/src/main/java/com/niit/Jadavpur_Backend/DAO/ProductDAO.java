@@ -8,6 +8,7 @@ public interface ProductDAO
 {
 	boolean insert(Product product);
 	Product getProduct(int p_id);
+	List<Product> listProduct();
 	List<Product> listActiveProducts();	
 	List<Product> listActiveProductsByCategory(int categoryId);
 

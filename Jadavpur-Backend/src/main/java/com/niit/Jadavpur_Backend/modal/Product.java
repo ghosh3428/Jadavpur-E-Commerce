@@ -38,11 +38,11 @@ public class Product
 	@Size(min=5 , max=250 , message="Length of the Discription must be between 5 and 250")
 	private String description;
 	
-	@Min(value=0 , message="Unit Price cannot be less than 0")
+	
 	@Column(name = "unit_price")
 	private double unitPrice;
 	
-	@Min(value=0 , message="Quantity cannot be less than 0")
+	
 	private int quantity;
 	
 	@JsonIgnore

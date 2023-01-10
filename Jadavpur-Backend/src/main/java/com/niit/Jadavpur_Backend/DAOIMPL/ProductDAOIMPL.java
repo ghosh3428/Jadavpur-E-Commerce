@@ -64,4 +64,13 @@ public class ProductDAOIMPL implements ProductDAO
 		return query.getResultList();
 	}
 
+
+	@Override
+	public List<Product> listProduct() 
+	{
+		String selectActiveCategory = "FROM Product";
+		Query query = sessionFactory.getCurrentSession().createQuery(selectActiveCategory);						
+		return query.getResultList();
+	}
+
 }

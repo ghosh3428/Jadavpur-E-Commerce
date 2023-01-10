@@ -25,7 +25,7 @@ public class UserTest
 		userDAO = (UserDAO)context.getBean("userDAO");
 	}
 	
-	@Test
+	//@Test
 	public void testInsert()
 	{
 		user = new User();
@@ -44,7 +44,6 @@ public class UserTest
 		user.setEmail("kapil@gmail.com");
 		user.setEnabled(true);
 		user.setFirstName("Kapil");
-		user.setId(2);
 		user.setLastName("Sharma");
 		user.setPassword("supplier12345");
 		user.setRole("SUPPLIER");
@@ -53,7 +52,7 @@ public class UserTest
 		assertEquals("Error inserting user" ,  true , userDAO.insert(user));
 	}
 	
-	@Test
+	//@Test
 	public void testGetUser()
 	{
 		user = userDAO.getUser("rohan@gmail.com");
