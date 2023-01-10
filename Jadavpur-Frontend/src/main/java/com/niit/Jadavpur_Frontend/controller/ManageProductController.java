@@ -21,6 +21,7 @@ import com.niit.Jadavpur_Backend.modal.Category;
 import com.niit.Jadavpur_Backend.modal.Product;
 import com.niit.Jadavpur_Backend.modal.User;
 import com.niit.Jadavpur_Frontend.util.FileUpload;
+import com.niit.Jadavpur_Frontend.validator.ProductValidation;
 
 @Controller
 @RequestMapping(value={"/manage"})
@@ -59,12 +60,19 @@ public class ManageProductController
 	@RequestMapping(value={"/add/product"})
 	public String addProduct(@Valid @ModelAttribute("newProduct") Product p,BindingResult results , ModelMap model,HttpServletRequest request)
 	{
+		if(p.getId() == 0)
+		{
+			new ProductValidation().validate(p,results);
+		}
+		
 		if(results.hasErrors()) 
 		{
 			
 			model.addAttribute("userclickmanageproduct",true);
 			return "index";
-		}	
+		}
+		
+		
 		else
 		{
 			productDAO.insert(p);

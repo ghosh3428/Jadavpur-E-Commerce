@@ -15,18 +15,6 @@
 			</div>
 		</c:if>
 
-		<c:if test="${not empty error}">
-			<div class="col-xs-12 offset-md-1 col-md-10">
-				<div class="alert alert-danger alert-dismissible" role="alert">
-					${error}
-					<button type="button" class="close" data-dismiss="alert"
-						aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-			</div>
-		</c:if>
-
 		<div class="offset-md-1 col-md-10">
 			<div class="card">
 
@@ -137,13 +125,56 @@
 			</div>
 		</div>
 	</div>
+	
+	<div class="row">
+		<div class="col-md-12">
+			<h1>Available products</h1>
+		</div>
+		<div class="col-md-12">
+
+			<table id="adminProductsTable"
+				class="table table-condensed table-bordered">
+
+				<thead>
+					<tr>
+						<th>Id</th>
+						<th>&#160;</th>
+						<th>Name</th>
+						<th>Brand</th>
+						<th>Qty. Avail</th>
+						<th>Unit Price</th>
+						<th>ACTIVATE</th>
+						<th>EDIT</th>
+					</tr>
+				</thead>
+
+
+
+				<tfoot>
+					<tr>
+						<th>Id</th>
+						<th>&#160;</th>
+						<th>Name</th>
+						<th>Brand</th>
+						<th>Qty. Avail</th>
+						<th>Unit Price</th>
+						<th>ACTIVATE</th>
+						<th>EDIT</th>
+					</tr>
+				</tfoot>
+
+
+			</table>
+		</div>
+	</div>
 
 
 
 
 
 
-	<div class="modal fade" id="myCategoryModal" tabindex="-1"
+
+	<div class="modal" id="myCategoryModal" tabindex="-1"
 		role="dialog">
 
 		<div class="modal-dialog" role="document">
