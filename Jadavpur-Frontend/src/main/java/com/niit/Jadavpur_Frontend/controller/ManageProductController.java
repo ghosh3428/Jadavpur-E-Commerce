@@ -10,8 +10,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.niit.Jadavpur_Backend.DAO.CategoryDAO;
@@ -36,7 +39,16 @@ public class ManageProductController
 	@Autowired
 	UserDAO userDAO;
 	
-	
+	@RequestMapping(value={"/{id}/product"})
+	public ModelAndView editProduct(@PathVariable("id") int p_id)
+	{
+		ModelAndView mv = new ModelAndView("index");
+		
+		mv.addObject("newProduct" , productDAO.getProduct(p_id));
+		
+		mv.addObject("userclickmanageproduct" , true);
+		return mv;
+	}
 	
 	@RequestMapping(value={"/product"})
 	public ModelAndView manageProduct(@RequestParam(name="operation", required=false) String operation)
@@ -53,6 +65,10 @@ public class ManageProductController
 			{
 				mv.addObject("message", "Product added successfully!");
 			}
+			if(operation.equals("category"))
+			{
+				mv.addObject("message", "Category added successfully!");
+			}
 		}
 		return mv;	
 	}
@@ -64,6 +80,14 @@ public class ManageProductController
 		{
 			new ProductValidation().validate(p,results);
 		}
+		else
+		{
+			if(!(p.getFile().getOriginalFilename().equals("") || p.getFile() == null))
+			{
+				new ProductValidation().validate(p,results);
+			}
+		}
+		
 		
 		if(results.hasErrors()) 
 		{
@@ -75,7 +99,10 @@ public class ManageProductController
 		
 		else
 		{
-			productDAO.insert(p);
+			if(p.getId() == 0)
+				productDAO.insert(p);
+			else
+				productDAO.update(p);
 			
 			if(! p.getFile().getOriginalFilename().equals("") )
 			{
@@ -88,7 +115,14 @@ public class ManageProductController
 		
 	}
 	
-	
+	@RequestMapping(value={"/add/category"})
+	public String addCategory(@ModelAttribute("category") Category c)
+	{
+		c.setActive(true);
+		categoryDAO.insert(c);
+		
+		return "redirect:/manage/product?operation=category";
+	}
 	
 	@ModelAttribute("categorylist") 
 	public List<Category> modelCategoryList() 
@@ -105,6 +139,24 @@ public class ManageProductController
 	public Category modelCategory() 
 	{
 		return new Category();
+	}
+	
+	@RequestMapping(value = "/product/{id}/activation", method=RequestMethod.POST)
+	@ResponseBody
+	public String handleProductAvtivation(@PathVariable int id)
+	{
+		Product product = productDAO.getProduct(id);
+		
+		boolean  isActive= product.isActive();
+		
+		product.setActive(!isActive);
+		
+		productDAO.update(product);	
+		
+		
+		return (isActive)? 
+				"Successfully Deactivated the product with id : " +product.getId()
+				: "Successfully Activated the product with id : " +product.getId();
 	}
 	
 }

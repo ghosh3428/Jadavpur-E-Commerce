@@ -7,6 +7,7 @@ import com.niit.Jadavpur_Backend.modal.Product;
 public interface ProductDAO 
 {
 	boolean insert(Product product);
+	boolean update(Product product);
 	Product getProduct(int p_id);
 	List<Product> listProduct();
 	List<Product> listActiveProducts();	

@@ -103,15 +103,20 @@
 									class="form-control">
 								</sf:select>
 								<br />
-								<div class="text-end">
-									<button type="button" data-toggle="modal"
-										data-target="#myCategoryModal" class="btn btn-warning btn-sm">ADD
-										CATEGORY</button>
+								<div class="text-right">
+									<c:if test="${newProduct.id == 0 }">
+										<button type="button" data-toggle="modal"
+											data-target="#myCategoryModal" class="btn btn-warning btn-sm">ADD
+											CATEGORY</button>
+									</c:if>
 								</div>
 							</div>
 						</div>
 
 						<div class="form-group row">
+							<sf:hidden path="id" />
+							<sf:hidden path="code" />
+							<sf:hidden path="active" />
 
 							<div class="offset-md-4 col-md-8">
 								<input type="submit" name="submit" id="submit" value="submit"
@@ -125,7 +130,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<div class="row">
 		<div class="col-md-12">
 			<h1>Available products</h1>
@@ -174,8 +179,7 @@
 
 
 
-	<div class="modal" id="myCategoryModal" tabindex="-1"
-		role="dialog">
+	<div class="modal" id="myCategoryModal" tabindex="-1" role="dialog">
 
 		<div class="modal-dialog" role="document">
 
@@ -193,9 +197,8 @@
 				<div class="modal-body">
 
 					<sf:form id="categoryForm" class="form-horizontal"
-						modelAttribute="category" 
-						action="${contextRoot}/manage/add/category"
-						method="POST">
+						modelAttribute="category"
+						action="${contextRoot}/manage/add/category" method="POST">
 
 						<div class="form-group row">
 							<label class="control-label col-md-4">Name</label>

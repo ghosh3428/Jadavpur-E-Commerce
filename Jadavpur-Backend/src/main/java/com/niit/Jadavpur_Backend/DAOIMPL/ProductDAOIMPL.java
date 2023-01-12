@@ -30,6 +30,18 @@ public class ProductDAOIMPL implements ProductDAO
 			return false;
 		}
 	}
+	public boolean update(Product product) 
+	{
+		try {
+			product.setActive(true);
+			sessionFactory.getCurrentSession().update(product);
+			return true;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
+	
 
 
 	@Override
