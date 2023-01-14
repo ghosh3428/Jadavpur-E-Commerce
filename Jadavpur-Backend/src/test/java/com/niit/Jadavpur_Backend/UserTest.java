@@ -25,7 +25,7 @@ public class UserTest
 		userDAO = (UserDAO)context.getBean("userDAO");
 	}
 	
-	//@Test
+	@Test
 	public void testInsert()
 	{
 		user = new User();

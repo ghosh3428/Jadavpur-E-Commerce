@@ -33,7 +33,7 @@ public class ProductDAOIMPL implements ProductDAO
 	public boolean update(Product product) 
 	{
 		try {
-			product.setActive(true);
+			//product.setActive(true);
 			sessionFactory.getCurrentSession().update(product);
 			return true;
 		} catch (Exception e) {

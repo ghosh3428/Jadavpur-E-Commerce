@@ -145,12 +145,13 @@ public class ManageProductController
 	@ResponseBody
 	public String handleProductAvtivation(@PathVariable int id)
 	{
+		System.out.println("Entered Activation method");
 		Product product = productDAO.getProduct(id);
 		
 		boolean  isActive= product.isActive();
-		
+		System.out.println("Product : " + product.isActive());
 		product.setActive(!isActive);
-		
+		System.out.println("Product : " + product.isActive());
 		productDAO.update(product);	
 		
 		

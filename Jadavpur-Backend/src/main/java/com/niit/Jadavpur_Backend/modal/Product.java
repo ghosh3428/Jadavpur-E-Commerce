@@ -45,7 +45,6 @@ public class Product
 	
 	private int quantity;
 	
-	@JsonIgnore
 	@Column(name = "is_active")
 	private boolean active;
 	
