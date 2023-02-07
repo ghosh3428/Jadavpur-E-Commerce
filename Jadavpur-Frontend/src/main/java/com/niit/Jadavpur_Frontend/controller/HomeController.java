@@ -32,6 +32,15 @@ public class HomeController
 		return mv;
 	}
 	
+	@RequestMapping(value="/register")
+	public ModelAndView register()
+	{
+		ModelAndView mv = new ModelAndView("index");
+		mv.addObject("title" , "Online Shopping - About Us");
+		mv.addObject("userclickregister" , true);
+		return mv;
+	}
+	
 	@RequestMapping(value="/contact")
 	public ModelAndView contact()
 	{

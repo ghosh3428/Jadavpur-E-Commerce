@@ -82,10 +82,12 @@ public class ManageProductController
 		}
 		else
 		{
+			
 			if(!(p.getFile().getOriginalFilename().equals("") || p.getFile() == null))
 			{
 				new ProductValidation().validate(p,results);
 			}
+			
 		}
 		
 		
@@ -99,6 +101,7 @@ public class ManageProductController
 		
 		else
 		{
+			
 			if(p.getId() == 0)
 				productDAO.insert(p);
 			else
@@ -158,6 +161,7 @@ public class ManageProductController
 		return (isActive)? 
 				"Successfully Deactivated the product with id : " +product.getId()
 				: "Successfully Activated the product with id : " +product.getId();
+				
 	}
 	
 }

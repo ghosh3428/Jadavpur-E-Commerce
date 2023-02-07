@@ -39,39 +39,28 @@
 </head>
 
 <body>
-	<%@ include file="./shared/nav.jsp"%>
+	<div class="container">
 
-	<div class="wrapper">
-		<div class="content">
-			<!-- Home Content -->
-			<div class="container">
-				<c:if test="${userclickhome == true}">
-					<%@ include file="home.jsp"%>
-				</c:if>
-				<c:if test="${userclickaboutus == true}">
-					<%@ include file="about.jsp"%>
-				</c:if>
-				<c:if test="${userclickcontactus == true}">
-					<%@ include file="contact.jsp"%>
-				</c:if>
-				<c:if test="${userclicksingleproduct == true}">
-					<%@ include file="viewproduct.jsp"%>
-				</c:if>
-				<c:if
-					test="${userclickallproducts == true || userclickcategoryproducts==true}">
-					<%@ include file="product.jsp"%>
-				</c:if>
-				<c:if test="${userclickmanageproduct == true}">
-					<%@ include file="manageproduct.jsp"%>
-				</c:if>
-				<c:if test="${userclickregister == true}">
-					<%@ include file="register.jsp"%>
-				</c:if>
+		<div class="row">
+
+			<div class="col-md-6">
+				<h1>Personal Details</h1>
+				
+				<a href="${flowExecutionUrl}&_eventId_personal"
+								class="btn btn-primary">Edit</a>
 			</div>
+			<div class="col-md-6">
+				<h1>Billing Details</h1>
+				<a href="${flowExecutionUrl}&_eventId_billing"
+								class="btn btn-primary">Edit</a>
+			</div>
+			
+			<a href="${flowExecutionUrl}&_eventId_success"
+								class="btn btn-primary">Confirm</a>
+
 		</div>
 
-		<!-- Footer -->
-		<%@include file="./shared/footer.jsp"%>
+
 	</div>
 	<!-- JQuery core JavaScript -->
 	<script src="${js}/jquery.min.js"></script>
@@ -88,4 +77,6 @@
 </body>
 
 </html>
+
+
 
