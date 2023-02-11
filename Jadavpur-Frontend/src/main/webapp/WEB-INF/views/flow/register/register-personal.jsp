@@ -7,7 +7,7 @@
 
 			<div class="card">
 
-				<div class="card-heading bg-primary text-white">
+				<div class="card-heading bg-success text-white">
 					<h4>Sign Up - Personal</h4>
 				</div>
 
