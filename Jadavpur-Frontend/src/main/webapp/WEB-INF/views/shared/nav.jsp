@@ -23,6 +23,10 @@
 				<li class="nav-item active"><a class="nav-link"
 					href="${contextRoot}/manage/product">Manage Product </a></li>
 			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li class="nav-item" id="signup"><a class="nav-link"
+					href="${contextRoot}/register">Sign Up </a></li>
+			</ul>
+
 		</div>
-	</div>
 </nav>

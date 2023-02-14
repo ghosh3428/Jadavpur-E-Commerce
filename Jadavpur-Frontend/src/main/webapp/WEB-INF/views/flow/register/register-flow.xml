@@ -16,7 +16,7 @@
 	<!-- Start State -->
 	<view-state id="personal" model="user"
 		view="flow/register/register-personal">
-		<transition on="billing" to="billing"></transition>
+		<transition on="billing" to="validate"></transition>
 		<on-exit>
 			<evaluate
 				expression="registerHandler.addUser(flowScope.registerModel , user)"></evaluate>
@@ -38,8 +38,21 @@
 		view="flow/register/register-confirm">
 		<transition on="personal" to="personal"></transition>
 		<transition on="billing" to="billing"></transition>
-		<transition on="success" to="success"></transition>
+		<transition on="confirm" to="submit"></transition>
 	</view-state>
+	
+	<action-state id="submit">
+		<evaluate
+				expression="registerHandler.saveAll(flowScope.registerModel)"></evaluate>
+				<transition on="success" to="success" />
+	</action-state>
+	
+	<action-state id="validate">
+	<evaluate
+				expression="registerHandler.validate(user,messageContext)"></evaluate>
+				<transition on="error" to="personal" />
+				<transition on="billing" to="billing" />
+	</action-state>
 
 	<end-state id="success" view="flow/register/register-success"></end-state>
 
