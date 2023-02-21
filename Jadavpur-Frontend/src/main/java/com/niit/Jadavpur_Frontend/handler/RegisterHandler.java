@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 
 import com.niit.Jadavpur_Backend.DAO.UserDAO;
 import com.niit.Jadavpur_Backend.modal.Address;
+import com.niit.Jadavpur_Backend.modal.Cart;
 import com.niit.Jadavpur_Backend.modal.User;
 import com.niit.Jadavpur_Frontend.model.RegisterModel;
 
@@ -32,8 +33,15 @@ public class RegisterHandler
 	public String saveAll(RegisterModel registerModel) 
 	{
 		User user = registerModel.getUser();
-		userDAO.insert(user);
 		
+		
+		if (user.getRole().equals("USER")) {
+			Cart cart = new Cart();
+			cart.setUser(user);
+			user.setCart(cart);
+		}
+		
+		userDAO.insert(user);
 		
 		Address billing = registerModel.getBilling();
 		billing.setUserId(user.getId());
