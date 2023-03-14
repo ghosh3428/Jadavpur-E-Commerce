@@ -23,7 +23,7 @@ public class HibernateConfig {
 	private String DATABASE_USERNAME = "student";
 	private String DATABASE_PASSWORD = "password";
 
-	@Bean
+	@Bean("dataSource")
 	public DataSource getDataSource() {
 		BasicDataSource dataSource = new BasicDataSource();
 
