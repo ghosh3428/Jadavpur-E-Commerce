@@ -16,11 +16,11 @@
 				<tr>
 					<td data-th="Product">
 						<div class="row">
-							<div class="col-sm-3 hidden-xs">
+							<div class="col-sm-4 hidden-xs">
 								<img src="${images}/${cartLine.product.code}.jpg"
 									alt="${cartLine.product.name}" class="dataTableImg" />
 							</div>
-							<div class="col-sm-9">
+							<div class="col-sm-8">
 								<h4 class="nomargin">${cartLine.product.name}</h4>
 								<p>Brand : ${cartLine.product.brand}</p>
 								<p>Description : ${cartLine.product.description}
