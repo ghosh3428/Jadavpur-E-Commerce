@@ -41,16 +41,17 @@ public class UserTest
 		*/
 		
 		user.setContactNumber("9807898734");
-		user.setEmail("kapil@gmail.com");
+		user.setEmail("rs@gmail.com");
 		user.setEnabled(true);
-		user.setFirstName("Kapil");
-		user.setLastName("Sharma");
-		user.setPassword("supplier12345");
-		user.setRole("SUPPLIER");
+		user.setFirstName("Rajiv");
+		user.setLastName("Singh");
+		user.setPassword("user12345");
+		user.setRole("USER");
 		
 		
 		assertEquals("Error inserting user" ,  true , userDAO.insert(user));
 	}
+	/*
 	
 	//@Test
 	public void testGetUser()
@@ -58,4 +59,5 @@ public class UserTest
 		user = userDAO.getUser("rohan@gmail.com");
 		assertEquals("Error fetching user" , "Rohan" , user.getFirstName());
 	}
+	*/
 }	
