@@ -49,4 +49,13 @@ public class HomeController
 		mv.addObject("userclickcontactus" , true);
 		return mv;
 	}
+	
+	@RequestMapping(value="/login")
+	public ModelAndView login()
+	{
+		ModelAndView mv = new ModelAndView("login");
+		mv.addObject("title" , "Online Shopping - LOGIN");
+		
+		return mv;
+	}
 }
