@@ -45,8 +45,8 @@ public class UserTest
 		user.setEnabled(true);
 		user.setFirstName("Rajiv");
 		user.setLastName("Singh");
-		user.setPassword("user12345");
-		user.setRole("USER");
+		user.setPassword("admin12345");
+		user.setRole("ADMIN");
 		
 		
 		assertEquals("Error inserting user" ,  true , userDAO.insert(user));
