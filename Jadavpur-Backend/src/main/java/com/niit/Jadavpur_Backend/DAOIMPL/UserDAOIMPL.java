@@ -34,8 +34,6 @@ public class UserDAOIMPL implements UserDAO
 		}
 	}
 
-
-	@SuppressWarnings("deprecation")
 	public User getUser(String email) 
 	{
 	
