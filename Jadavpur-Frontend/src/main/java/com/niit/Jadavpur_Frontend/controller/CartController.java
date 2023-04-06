@@ -39,7 +39,7 @@ public class CartController
 				}
 		}
 		
-		mv.addObject("cartlines" , cartlinesDAO.listAvailable(35) );
+		mv.addObject("cartlines" , cartlinesService.getCartLines() );
 		return mv;
 	}
 	
