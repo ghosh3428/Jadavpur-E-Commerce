@@ -41,12 +41,12 @@ public class UserTest
 		*/
 		
 		user.setContactNumber("9807898734");
-		user.setEmail("rs@gmail.com");
+		user.setEmail("sd@gmail.com");
 		user.setEnabled(true);
-		user.setFirstName("Rajiv");
-		user.setLastName("Singh");
-		user.setPassword("admin12345");
-		user.setRole("ADMIN");
+		user.setFirstName("Soham");
+		user.setLastName("Das");
+		user.setPassword("supplier12345");
+		user.setRole("Supplier");
 		
 		
 		assertEquals("Error inserting user" ,  true , userDAO.insert(user));
