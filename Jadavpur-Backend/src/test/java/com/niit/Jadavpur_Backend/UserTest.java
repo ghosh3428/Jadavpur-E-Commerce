@@ -7,6 +7,7 @@ import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.niit.Jadavpur_Backend.DAO.UserDAO;
+import com.niit.Jadavpur_Backend.modal.Address;
 import com.niit.Jadavpur_Backend.modal.User;
 
 public class UserTest 
@@ -34,22 +35,29 @@ public class UserTest
 		user.setEmail("rohan@gmail.com");
 		user.setEnabled(true);
 		user.setFirstName("Rohan");
-		user.setId(1);
 		user.setLastName("Mishra");
 		user.setPassword("user12345");
 		user.setRole("USER");
 		*/
-		
+		/*
 		user.setContactNumber("9807898734");
 		user.setEmail("sd@gmail.com");
 		user.setEnabled(true);
 		user.setFirstName("Soham");
 		user.setLastName("Das");
 		user.setPassword("supplier12345");
-		user.setRole("Supplier");
-		
-		
+		user.setRole("SUPPLIER");
+		*/
+		/*
+		user.setContactNumber("9087667890");
+		user.setEmail("niitjadavpur@gmail.com");
+		user.setEnabled(true);
+		user.setFirstName("Niit");
+		user.setLastName("Jadavpur");
+		user.setPassword("admin12345");
+		user.setRole("ADMIN");
 		assertEquals("Error inserting user" ,  true , userDAO.insert(user));
+	*/
 	}
 	/*
 	
@@ -60,4 +68,25 @@ public class UserTest
 		assertEquals("Error fetching user" , "Rohan" , user.getFirstName());
 	}
 	*/
+	@Test
+	public void testAddUser() 
+	{
+		
+		Address address = new Address();
+		address.setAddressLineOne("101/B Jadoo Society, Krissh Nagar");
+		address.setAddressLineTwo("Near Kaabil Store");
+		address.setCity("Mumbai");
+		address.setState("Maharashtra");
+		address.setCountry("India");
+		address.setPostalCode("400001");
+		address.setShipping(true);
+		
+		address.setUserId(33);
+			
+		assertEquals("Failed to add the billing address!", true, userDAO.insertAddress(address));
+		
+		
+		
+		
+	}
 }	

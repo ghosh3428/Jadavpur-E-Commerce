@@ -17,11 +17,11 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableTransactionManagement
 @ComponentScan(basePackages={"com.niit.Jadavpur_Backend.model"})
 public class HibernateConfig {
-	private String DATABASE_URL = "jdbc:h2:tcp://localhost/~/test";
+	private String DATABASE_URL = "jdbc:h2:tcp://localhost/~/niit";
 	private String DATABASE_DRIVER = "org.h2.Driver";
 	private String DATABASE_DIALECT = "org.hibernate.dialect.H2Dialect";
-	private String DATABASE_USERNAME = "sa";
-	private String DATABASE_PASSWORD = "";
+	private String DATABASE_USERNAME = "student";
+	private String DATABASE_PASSWORD = "password";
 
 	@Bean("dataSource")
 	public DataSource getDataSource() {

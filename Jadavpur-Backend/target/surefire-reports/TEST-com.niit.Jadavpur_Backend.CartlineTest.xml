@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="1" failures="0" name="com.niit.Jadavpur_Backend.CartlineTest" time="0.162" errors="1" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_202\jre\bin"/>
+    <property name="java.vm.version" value="25.202-b08"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="D:\Debabrato\Jadavpur-E-Commerce-main\Jadavpur-Backend"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="IN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="D:\Debabrato\Jadavpur-E-Commerce-main\Jadavpur-Backend"/>
+    <property name="java.runtime.version" value="1.8.0_202-b08"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_202\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\Admin\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="classworlds.conf" value="C:\Users\Admin\eclipse-workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf3742722778243438508.tmp"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_202\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jdk1.8.0_202/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_202/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_202/bin/../jre/lib/amd64;C:\oraclexe\app\oracle\product\10.2.0\server\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\OpenJDK\jdk-8.0.292.10-hotspot\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_202\bin;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\110\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\;C:\Program Files\Java\jdk1.8.0_202\bin;C:\Users\Admin\AppData\Local\Programs\Python\Python310;C:\Program Files\Java\jdk1.8.0_202\bin;C:\Users\Admin\AppData\Local\Programs\Python\Python310\Scripts;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Program Files\OpenJDK\jdk-8.0.292.10-hotspot\bin;C:\Users\Admin\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Admin\AppData\Local\Programs\Python\Python310;;C:\Windows\System32;;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="user.home" value="C:\Users\Admin"/>
+    <property name="user.timezone" value="Asia/Calcutta"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="Admin"/>
+    <property name="java.class.path" value="C:\Users\Admin\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_1.16.0.20200610-1735\jars\plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_202\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_202"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_202\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_202\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="D:\Debabrato\Jadavpur-E-Commerce-main\Jadavpur-Backend\EMBEDDED"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="com.niit.Jadavpur_Backend.CartlineTest" name="testInsert" time="0.162">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at com.niit.Jadavpur_Backend.CartlineTest.testInsert(CartlineTest.java:45)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</error>
+    <system-out>Hibernate: 
+    
+    drop table Niit_Jadavpur_Address if exists
+Hibernate: 
+    
+    drop table Niit_Jadavpur_Cart if exists
+Hibernate: 
+    
+    drop table Niit_Jadavpur_CartLines if exists
+Hibernate: 
+    
+    drop table Niit_Jadavpur_Category if exists
+Hibernate: 
+    
+    drop table Niit_Jadavpur_Product if exists
+Hibernate: 
+    
+    drop table Niit_Jadavpur_User if exists
+Hibernate: 
+    
+    drop sequence if exists hibernate_sequence
+Hibernate: create sequence hibernate_sequence start with 1 increment by 1
+Hibernate: 
+    
+    create table Niit_Jadavpur_Address (
+       id integer not null,
+        address_line_one varchar(255),
+        address_line_two varchar(255),
+        is_billing boolean,
+        city varchar(255),
+        country varchar(255),
+        postal_code varchar(255),
+        is_shipping boolean,
+        state varchar(255),
+        user_id integer,
+        primary key (id)
+    )
+Hibernate: 
+    
+    create table Niit_Jadavpur_Cart (
+       id integer not null,
+        cartLines integer not null,
+        grandTotal double not null,
+        user_id integer,
+        primary key (id)
+    )
+Hibernate: 
+    
+    create table Niit_Jadavpur_CartLines (
+       id integer not null,
+        is_available boolean,
+        buying_price double,
+        cart_id integer,
+        product_count integer,
+        total double not null,
+        product_id integer,
+        primary key (id)
+    )
+Hibernate: 
+    
+    create table Niit_Jadavpur_Category (
+       id integer not null,
+        active boolean not null,
+        Category_Name varchar(255),
+        Category_Description varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    
+    create table Niit_Jadavpur_Product (
+       id integer not null,
+        is_active boolean,
+        brand varchar(255),
+        category_id integer,
+        code varchar(255),
+        description varchar(255),
+        name varchar(255),
+        quantity integer not null,
+        supplier_id integer,
+        unit_price double,
+        primary key (id)
+    )
+Hibernate: 
+    
+    create table Niit_Jadavpur_User (
+       id integer not null,
+        contact_number varchar(255),
+        email varchar(255),
+        enabled boolean not null,
+        first_name varchar(255),
+        last_name varchar(255),
+        password varchar(255),
+        role varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    
+    alter table Niit_Jadavpur_Cart 
+       add constraint FKe99032nw5bhg6h189w8imkwsw 
+       foreign key (user_id) 
+       references Niit_Jadavpur_User
+Hibernate: 
+    
+    alter table Niit_Jadavpur_CartLines 
+       add constraint FKc0mxqwk3h6b43rdanw8p36gv1 
+       foreign key (product_id) 
+       references Niit_Jadavpur_Product
+Hibernate: 
+    select
+        product0_.id as id1_4_0_,
+        product0_.is_active as is_activ2_4_0_,
+        product0_.brand as brand3_4_0_,
+        product0_.category_id as category4_4_0_,
+        product0_.code as code5_4_0_,
+        product0_.description as descript6_4_0_,
+        product0_.name as name7_4_0_,
+        product0_.quantity as quantity8_4_0_,
+        product0_.supplier_id as supplier9_4_0_,
+        product0_.unit_price as unit_pr10_4_0_ 
+    from
+        Niit_Jadavpur_Product product0_ 
+    where
+        product0_.id=?
+</system-out>
+    <system-err>May 01, 2023 4:47:53 PM org.springframework.context.annotation.AnnotationConfigApplicationContext prepareRefresh
+INFO: Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@63d4e2ba: startup date [Mon May 01 16:47:53 IST 2023]; root of context hierarchy
+May 01, 2023 4:47:53 PM org.hibernate.Version logVersion
+INFO: HHH000412: Hibernate Core {5.2.7.Final}
+May 01, 2023 4:47:53 PM org.hibernate.cfg.Environment &lt;clinit&gt;
+INFO: HHH000206: hibernate.properties not found
+May 01, 2023 4:47:53 PM org.hibernate.annotations.common.reflection.java.JavaReflectionManager &lt;clinit&gt;
+INFO: HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+May 01, 2023 4:47:54 PM org.hibernate.dialect.Dialect &lt;init&gt;
+INFO: HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+May 01, 2023 4:47:55 PM org.hibernate.validator.internal.util.Version &lt;clinit&gt;
+INFO: HV000001: Hibernate Validator 5.4.1.Final
+May 01, 2023 4:47:55 PM org.hibernate.tool.schema.internal.SchemaCreatorImpl applyImportSources
+INFO: HHH000476: Executing import script &apos;org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@66eb985d&apos;
+May 01, 2023 4:47:55 PM org.springframework.orm.hibernate5.HibernateTransactionManager afterPropertiesSet
+INFO: Using DataSource [org.apache.commons.dbcp2.BasicDataSource@73a1e9a9] of Hibernate SessionFactory for HibernateTransactionManager
+</system-err>
+  </testcase>
+</testsuite>
