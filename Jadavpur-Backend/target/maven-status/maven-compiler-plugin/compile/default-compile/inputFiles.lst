@@ -5,6 +5,7 @@ D:\Debabrato\Jadavpur-E-Commerce-main\Jadavpur-Backend\src\main\java\com\niit\Ja
 D:\Debabrato\Jadavpur-E-Commerce-main\Jadavpur-Backend\src\main\java\com\niit\Jadavpur_Backend\modal\Cart.java
 D:\Debabrato\Jadavpur-E-Commerce-main\Jadavpur-Backend\src\main\java\com\niit\Jadavpur_Backend\modal\Category.java
 D:\Debabrato\Jadavpur-E-Commerce-main\Jadavpur-Backend\src\main\java\com\niit\Jadavpur_Backend\config\HibernateConfig.java
+D:\Debabrato\Jadavpur-E-Commerce-main\Jadavpur-Backend\src\main\java\com\niit\Jadavpur_Backend\modal\OrderItem.java
 D:\Debabrato\Jadavpur-E-Commerce-main\Jadavpur-Backend\src\main\java\com\niit\Jadavpur_Backend\modal\Product.java
 D:\Debabrato\Jadavpur-E-Commerce-main\Jadavpur-Backend\src\main\java\com\niit\Jadavpur_Backend\modal\User.java
 D:\Debabrato\Jadavpur-E-Commerce-main\Jadavpur-Backend\src\main\java\com\niit\Jadavpur_Backend\DAOIMPL\CartLinesDAOIMPL.java
@@ -13,4 +14,5 @@ D:\Debabrato\Jadavpur-E-Commerce-main\Jadavpur-Backend\src\main\java\com\niit\Ja
 D:\Debabrato\Jadavpur-E-Commerce-main\Jadavpur-Backend\src\main\java\com\niit\Jadavpur_Backend\DAO\CategoryDAO.java
 D:\Debabrato\Jadavpur-E-Commerce-main\Jadavpur-Backend\src\main\java\com\niit\Jadavpur_Backend\DAOIMPL\ProductDAOIMPL.java
 D:\Debabrato\Jadavpur-E-Commerce-main\Jadavpur-Backend\src\main\java\com\niit\Jadavpur_Backend\modal\CartLines.java
+D:\Debabrato\Jadavpur-E-Commerce-main\Jadavpur-Backend\src\main\java\com\niit\Jadavpur_Backend\modal\OrderDetails.java
 D:\Debabrato\Jadavpur-E-Commerce-main\Jadavpur-Backend\src\main\java\com\niit\Jadavpur_Backend\DAOIMPL\UserDAOIMPL.java

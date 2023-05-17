@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.niit.Jadavpur_Backend.CartlineTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.868 sec <<< FAILURE!
-testInsert(com.niit.Jadavpur_Backend.CartlineTest)  Time elapsed: 0.162 sec  <<< ERROR!
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.935 sec <<< FAILURE!
+testInsert(com.niit.Jadavpur_Backend.CartlineTest)  Time elapsed: 0.106 sec  <<< ERROR!
 java.lang.NullPointerException
 	at com.niit.Jadavpur_Backend.CartlineTest.testInsert(CartlineTest.java:45)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
