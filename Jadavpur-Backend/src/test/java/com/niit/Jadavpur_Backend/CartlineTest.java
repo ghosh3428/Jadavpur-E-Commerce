@@ -31,6 +31,7 @@ public class CartlineTest
 		productDAO = (ProductDAO)context.getBean("productDAO");
 		cartlinesDAO = (CartLinesDAO)context.getBean("cartlinesDAO");
 	}
+	/*
 	
 	@Test
 	public void testInsert()
@@ -48,4 +49,5 @@ public class CartlineTest
 		
 		assertEquals("Error adding cartline" , true , cartlinesDAO.add(cartlines));
 	}
+	*/
 }

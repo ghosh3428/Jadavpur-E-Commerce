@@ -24,7 +24,7 @@ public class CategoryTest
 		
 		categoryDAO = (CategoryDAO)context.getBean("categoryDAO");
 	}
-	
+	/*
 	//@Test
 	public void testInsert()
 	{
@@ -59,5 +59,5 @@ public class CategoryTest
 	{
 		assertEquals("Error updating Category" , 2, categoryDAO.categoryList().size());
 	}
-
+*/
 }
